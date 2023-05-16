@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace cherrydev
 {
@@ -7,6 +8,7 @@ namespace cherrydev
     public class SentenceNode : Node
     {
         [SerializeField] private Sentence sentence;
+        [SerializeField] public  Event eventToTrigger;
 
         [Space(10)]
         public Node parentNode;
@@ -73,6 +75,8 @@ namespace cherrydev
             sentence.characterSprite = (Sprite)EditorGUILayout.ObjectField(sentence.characterSprite,
                 typeof(Sprite), false, GUILayout.Width(textFieldWidth));
             EditorGUILayout.EndHorizontal();
+
+
 
             GUILayout.EndArea();
         }

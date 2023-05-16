@@ -10,7 +10,7 @@ public class Character : MonoBehaviour
 
     void Start()
     {
-        characterController = GetComponent<CharacterController>();
+        characterController = GetComponentInChildren<CharacterController>();
     }
 
 
