@@ -16,7 +16,7 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 322
+    x: 727
     y: 291
     width: 190
     height: 145
@@ -46,7 +46,7 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -768
+    x: -363
     y: 277
     width: 190
     height: 145
@@ -79,7 +79,7 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -467
+    x: -62
     y: 186
     width: 170
     height: 115
@@ -107,7 +107,7 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 761
+    x: 1166
     y: 299
     width: 170
     height: 115
@@ -161,7 +161,7 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -354
+    x: 51
     y: 321
     width: 170
     height: 115
@@ -169,7 +169,7 @@ MonoBehaviour:
   isSelected: 0
   sentence:
     characterName: Bret
-    text: Oh, I should introduce myself. Chad is the name, cleaning the town is my
+    text: Oh, I should introduce myself. Bret is the name, cleaning the town is my
       game
     characterSprite: {fileID: 0}
   parentNode: {fileID: 0}
@@ -190,7 +190,7 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 568
+    x: 973
     y: 300
     width: 170
     height: 115
@@ -218,7 +218,7 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -463
+    x: -58
     y: 486
     width: 170
     height: 115
@@ -246,7 +246,7 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 955
+    x: 1360
     y: 298
     width: 170
     height: 115
@@ -275,7 +275,7 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 97
+    x: 502
     y: 307
     width: 170
     height: 115
@@ -304,7 +304,7 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -1042
+    x: -637
     y: 293
     width: 170
     height: 115
@@ -332,7 +332,7 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -155
+    x: 250
     y: 316
     width: 170
     height: 115
