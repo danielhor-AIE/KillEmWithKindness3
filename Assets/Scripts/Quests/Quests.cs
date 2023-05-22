@@ -11,6 +11,8 @@ public class QuestManager : MonoBehaviour
 {
     public List<Quest> quests = new List<Quest>();
 
+    public static object Instance { get; internal set; }
+
     public void ShowQuests()
     {
         Debug.Log("Quests:");
