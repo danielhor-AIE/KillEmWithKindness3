@@ -167,50 +167,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5945874905641527704, guid: fd0d5354f06de0c43820970cf90cdfc0, type: 3}
   m_PrefabInstance: {fileID: 5326132798974736817}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2601348252385013296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975325650350641193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54577d38420c01d44a9b28330b6a8517, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogCharDelay: 0.3
-  nextSentenceKeyCode: 32
-  onDialogStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onDialogFinished:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3001849094986872927}
-        m_TargetAssemblyTypeName: NPCCharacter, Assembly-CSharp
-        m_MethodName: ChangeConversation
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: dbad4879a0eae674cbea67a0cf33e80d, type: 2}
-          m_ObjectArgumentAssemblyTypeName: cherrydev.DialogNodeGraph, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &3001849094986872927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,10 +179,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93df6ace7b999146b3c7ca4e930ab3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcDialogue: {fileID: 2601348252385013296}
-  conversation: {fileID: 11400000, guid: efbb0277d5232cb41ba1fe31e55666a1, type: 2}
 --- !u!4 &1975325650350641197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5945874905641527708, guid: fd0d5354f06de0c43820970cf90cdfc0, type: 3}
   m_PrefabInstance: {fileID: 5326132798974736817}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6592022584038224880
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1975325650350641197}
+    m_Modifications:
+    - target: {fileID: 5992440063495275401, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: MinDistance
+      value: 2.1262608
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011988201399623206, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_Name
+      value: Dialogue 3D
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297276050750010171, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: sentences.Array.data[0].sentence
+      value: Hi, you must be new to these parts. What brings you here?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: sentences.Array.data[0].sentenceSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 32974a213b725e44cb870cc72968492d, type: 3}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: sentences.Array.data[0].dialogueCharacter
+      value: 
+      objectReference: {fileID: 11400000, guid: 3e5e644d8d5725941b79d3277f39cbc1, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
