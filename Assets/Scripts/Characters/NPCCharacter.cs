@@ -1,25 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using HeneGames.DialogueSystem;
 
 public class NPCCharacter : MonoBehaviour
 {
 
-    //[SerializeField] public DialogBehaviour npcDialogue = null;
-    //[SerializeField] public DialogNodeGraph conversation = null;
-    private GameObject dialogueGo = null;
+    private DialogueManager npcDialogue = null;
+    private DialogueUI dialogueUI = null;
 
 
     private void Awake()
     {
-        //dialogueGo = FindObjectOfType<DialogDisplayer>().gameObject;
-        dialogueGo.SetActive(false);
+       dialogueUI = FindObjectOfType<DialogueUI>();
+       npcDialogue = GetComponent<DialogueManager>();
     }
     public void Interact()
     {
         Debug.Log("Interacting"); // this is where you will trigger a dialogue from
-        //npcDialogue.StartDialog();
-        dialogueGo.SetActive(true);
+        npcDialogue.StartDialogue();
+        dialogueUI.currentDialogueManager = npcDialogue; 
+
+
     }
 
     public void ChangeConversation()

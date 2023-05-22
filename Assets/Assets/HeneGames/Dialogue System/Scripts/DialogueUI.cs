@@ -27,7 +27,7 @@ namespace HeneGames.DialogueSystem
 
         #endregion
 
-        private DialogueManager currentDialogueManager;
+        public DialogueManager currentDialogueManager;
 
         [Header("References")]
         [SerializeField] private Image portrait;
@@ -52,17 +52,21 @@ namespace HeneGames.DialogueSystem
             if (currentDialogueManager == null)
                 return;
 
-            //Next dialogue input
-            if (Input.GetKeyDown(actionInput))
+            if(currentDialogueManager != null)
             {
-                //Tell the current dialogue manager to display the next sentence. This function also gives information if we are at the last sentence
-                currentDialogueManager.NextSentence(out bool lastSentence);
-
-                //If last sentence remove current dialogue manager
-                if(lastSentence)
+                //Next dialogue input
+                if (Input.GetKeyDown(actionInput))
                 {
-                    currentDialogueManager = null;
+                    //Tell the current dialogue manager to display the next sentence. This function also gives information if we are at the last sentence
+                    currentDialogueManager.NextSentence(out bool lastSentence);
+
+                    //If last sentence remove current dialogue manager
+                    if(lastSentence)
+                    {
+                        currentDialogueManager = null;
+                    }
                 }
+
             }
         }
 
