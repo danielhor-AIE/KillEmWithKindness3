@@ -55,6 +55,81 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[0].sentence
+      value: 'Hello, you don''t look like you are from these parts. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[1].sentence
+      value: Oh I should probably intorduce myself. My name is Bret, I am the chief
+        officer in this town.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[2].sentence
+      value: Currently, the town looks like a wreck. Since the tragedy months ago,
+        the folks here have been rebuilding while getting through the grief. Some
+        have lost almost everything.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[3].sentence
+      value: I know this is a bit to ask from a stranger like you, but would you
+        be able to help them out? It might not seem like much, but it will mean the
+        world to them that someone cares.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[4].sentence
+      value: Each of them has a friendship bar that you can fill by helping them
+        out. Once filled they will give you something as thanks, it would be great
+        to see this town come alive again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[5].sentence
+      value: Thanks, all the best!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[0].dialogueCharacter
+      value: 
+      objectReference: {fileID: 11400000, guid: 9733c81c8c56cc04faa2d55ba581a4b5, type: 2}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[1].dialogueCharacter
+      value: 
+      objectReference: {fileID: 11400000, guid: 9733c81c8c56cc04faa2d55ba581a4b5, type: 2}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[2].dialogueCharacter
+      value: 
+      objectReference: {fileID: 11400000, guid: 9733c81c8c56cc04faa2d55ba581a4b5, type: 2}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[3].dialogueCharacter
+      value: 
+      objectReference: {fileID: 11400000, guid: 9733c81c8c56cc04faa2d55ba581a4b5, type: 2}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[4].dialogueCharacter
+      value: 
+      objectReference: {fileID: 11400000, guid: 9733c81c8c56cc04faa2d55ba581a4b5, type: 2}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[5].dialogueCharacter
+      value: 
+      objectReference: {fileID: 11400000, guid: 9733c81c8c56cc04faa2d55ba581a4b5, type: 2}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[0].sentenceEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[0].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[0].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5945874905641527704, guid: fd0d5354f06de0c43820970cf90cdfc0, type: 3}
+    - target: {fileID: 4521507383556988776, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: sentences.Array.data[0].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7829098503348561698, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
       propertyPath: m_IsActive
       value: 0
