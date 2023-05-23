@@ -1635,7 +1635,7 @@ GameObject:
   - component: {fileID: 1178793693}
   - component: {fileID: 1178793692}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: Player icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1712,6 +1712,7 @@ GameObject:
   - component: {fileID: 1429266876}
   - component: {fileID: 1429266878}
   - component: {fileID: 1429266877}
+  - component: {fileID: 1429266879}
   m_Layer: 5
   m_Name: QuestTab
   m_TagString: Untagged
@@ -1774,6 +1775,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429266875}
   m_CullTransparentMesh: 1
+--- !u!114 &1429266879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429266875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd4213b0fb82e4c47a26e6dc120f34a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 0}
+  completedColor: {r: 0, g: 0, b: 0, a: 0}
+  activeColor: {r: 0, g: 0, b: 0, a: 0}
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  arrow: {fileID: 0}
+  allQuests: []
 --- !u!1 &1495709678
 GameObject:
   m_ObjectHideFlags: 0
