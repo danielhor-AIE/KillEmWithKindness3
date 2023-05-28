@@ -1,52 +1,94 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
-public class Quest : MonoBehaviour
+public class Quest : ScriptableObject
 {
+   [System.Serializable]
+   public struct Info
+   {
+	   public string Name;
+	   public Sprite Icon;
+	   public string Description
 
-    public Image questItem;
-    public Color completedColor;
-    public Color activeColor;
-    public Color currentColor;
+   }
 
-    public QuestArrow arrow;
 
-    public Quest[] allQuests;
+    [System.Serializable]
+	public struct Stat
+	{
+		public int Currency;
+		public int XP;
+	}
 
-    private void Start()
-    {
-        allQuests = FindObjectsOfType<Quest>();
-        currentColor = questItem.color;
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Player")
-        {
-            FinishQuest();
-            Destroy(gameObject);
-        }
-    }
+	[Header("Reward")] public Stat Reward = new Stat {Currency = 10, XP = 10};
 
-    void FinishQuest()
-    {
-        questItem.GetComponent<Button>().interactable = false;
-        currentColor = completedColor;
-        questItem.color = completedColor;
-        arrow.gameObject.SetActive(false);
-    }
+	public bool Completed { get; private set; }
+	public QuestCompletedEvent QuestComplete;
 
-    public void OnQuestClick()
-    {
-        arrow.gameObject.SetActive(true);
-        arrow.target = this.transform;
-        foreach(Quest quest in allQuests)
-        {
-            quest.questItem.color =currentColor;
-        }
-        questItem.color = activeColor;
-    }
+	public abstract class QuestGoal : ScriptableObject
+	{
+		protected string Description;
+		public int CurrentAmount { get; protected set; }
+		public int RequiredAmount = 1;
+
+		public bool Completed { get; protected set; }
+		[HideInInspector] public UnityEvent GoalCompleted;
+
+		public virtual string GetDescription()
+		{
+			return Description;
+		}
+
+		public virtual void Initialize()
+		{
+			Completed = false;
+			GoalCompleted = new UnityEvent();
+		}
+
+		protected void Evaluate()
+		{
+			if (CurrentAmount >= RequiredAmount)
+			{
+				Complete();
+			}
+		}
+
+		private void Complete()
+		{
+			Completed = true;
+			GoalCompleted.Invoke();
+			GoalCompleted.RemoveAllListeners();
+		}
+
+		public void Skip()
+	}
+
+	public List<QuestGoal> Goals;
+
+	public void Initialize()
+	{
+		Completed = false;
+		QuestCompleted = new QuestCompletedEvent();
+
+		foreach (var goal in Goals)
+		{
+			goal.Initialize();
+			goal.GoalCompleted.AddListener(call: delegate { CheckGoals(); });
+		}
+	}
+
+	private void CheckGoals()
+	{
+		Completed = Goals.All(g QuestGoal => g.Completed);
+		if (Completed)
+		{
+			//give Reward
+			QuestComplete.Invoke(arg0 this);
+			QuestCompleted.RemoveAllListeners();
+		}
+	}
 }
+
+public class QuestCompletedEvent : UnityEvent<Quest> { }
