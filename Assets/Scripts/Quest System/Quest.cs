@@ -62,7 +62,7 @@ public class Quest : ScriptableObject
 			GoalCompleted.RemoveAllListeners();
 		}
 
-		public void Skip()
+		public void Skip();
 	}
 
 	public abstract class QuestGoal : ScriptableObject{...}
