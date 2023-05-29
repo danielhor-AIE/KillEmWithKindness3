@@ -25,7 +25,7 @@ public class Quest : ScriptableObject
 	[Header("Reward")] public Stat Reward = new Stat {Currency = 10, XP = 10};
 
 	public bool Completed { get; private set; }
-	public QuestCompletedEvent QuestComplete;
+	public QuestCompletedEvent QuestCompleted;
 
 	public abstract class QuestGoal : ScriptableObject
 	{
@@ -65,6 +65,8 @@ public class Quest : ScriptableObject
 		public void Skip()
 	}
 
+	public abstract class QuestGoal : ScriptableObject{...}
+
 	public List<QuestGoal> Goals;
 
 	public void Initialize()
@@ -81,14 +83,22 @@ public class Quest : ScriptableObject
 
 	private void CheckGoals()
 	{
-		Completed = Goals.All(g QuestGoal => g.Completed);
+		Completed = Goals.All(g :QuestGoal => g.Completed);
 		if (Completed)
 		{
 			//give Reward
-			QuestComplete.Invoke(arg0 this);
+			QuestComplete.Invoke(this);
 			QuestCompleted.RemoveAllListeners();
 		}
 	}
 }
 
 public class QuestCompletedEvent : UnityEvent<Quest> { }
+
+#if UNITY_EDITOR
+[CustomEditor(typeof(Quest))]
+public class QuestEditor : Editor
+{
+
+}
+#endif 
