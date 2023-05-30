@@ -28,6 +28,9 @@ public class Quest : ScriptableObject
 	[Header("Reward")] public Stat Reward = new Stat {Currency = 10, XP = 10};
 
 	public bool Completed { get; private set; }
+	public object Information { get; internal set; }
+	public IEnumerable<object> Goals { get; private set; }
+
 	public QuestCompletedEvent QuestCompleted;
 
 
@@ -107,70 +110,94 @@ public class Quest : ScriptableObject
 
 public class QuestCompletedEvent : UnityEvent<Quest> { }
 
-#if UNITY_EDITOR
-[CustomEditor(typeof(Quest))]
-public class QuestEditor : Editor
-{
-	SerializedProperty m_QuestInfoProperty;
-	SerializedProperty m_QuestStatProperty;
+//#if UNITY_EDITOR
+//[CustomEditor(typeof(Quest))]
+//public class QuestEditor : Editor
+//{
+//	SerializedProperty m_QuestInfoProperty;
+//	SerializedProperty m_QuestStatProperty;
 
-	List<string> m_QuestGoalType;
-	SerializedProperty m_QuestGoalListProperty;
+//	List<string> m_QuestGoalType;
+//	SerializedProperty m_QuestGoalListProperty;
 
-	[MenuItem("Assets/Quest", priority = 0)]
-	public static void CreateQuest()
-	{
-		var newQuest = CreateInstance<Quest>();
+//	[MenuItem("Assets/Quest", priority = 0)]
+//	public static void CreateQuest()
+//	{
+//		var newQuest = CreateInstance<Quest>();
 
-		ProjectWindowUtil.CreateAsset(newQuest, pathName: "quest.asset");
-	}
+//		ProjectWindowUtil.CreateAsset(newQuest, pathName: "quest.asset");
+//	}
 
-	void OnEnable()
-	{
-		m_QuestInfoProperty = serializedObject.FindProperty(nameof(Quest.Information));
-		m_QuestStatProperty = serializedObject.FindProperty(nameof(Quest.Reward));
+//	void OnEnable()
+//	{
+//		m_QuestInfoProperty = serializedObject.FindProperty(nameof(Quest.Information));
+//		m_QuestStatProperty = serializedObject.FindProperty(nameof(Quest.Reward));
 
-		m_QuestGoalListProperty = serializedObject.FindProperty(nameof(Quest.Goals));
+//		m_QuestGoalListProperty = serializedObject.FindProperty(nameof(Quest.Goals));
 
-		var lookup:Type = typeof(Quest.QuestGoal);
+//		var lookup:Type = typeof(Quest.QuestGoal);
 
-		m_QuestGoalType = System.AppDomain.CurrentDomain.GetAssemblies()//Assembly[]
-		.SelectMany(assembly => assembly.GetTypes())
-		.Where(x: Type => x.IsClass && !x.IsAbstract && x.IsSubclassOf(lookup))//!Enumeraable
-		.Select(type => type.Name)//!Enumerable<string>
-		.ToList();//List<string>
+//		m_QuestGoalType = System.AppDomain.CurrentDomain.GetAssemblies()//Assembly[]
+//		.SelectMany(assembly => assembly.GetTypes())
+//		.Where(x: Type => x.IsClass && !x.IsAbstract && x.IsSubclassOf(lookup))//!Enumeraable
+//		.Select(type => type.Name)//!Enumerable<string>
+//		.ToList();//List<string>
 
-	}
+//	}
 
-	public override void OnInspectorGUI()
-	{
-		var child:SerializedProperty = m_QuestInfoProperty.Copy();
-		var depth:int = child.depth;
-		child.NextVisible(enterChildren: false);
-	}
+//	public override void OnInspectorGUI()
+//	{
+//		var child:SerializedProperty = m_QuestInfoProperty.Copy();
+//		int = child.depth;
+//		child.NextVisible(enterChildren: false);
+//	}
 
-	child = m_QuestStatProperty.Copy();
-	depth = child.depth;
-	child.NextVisible(enterChildren:true);
+//	child = m_QuestStatProperty.Copy();
+//	depth = child.depth;
+//	child.NextVisible(enterChildren:true);
 
-	EditorGUILayout.LabelField("Quest reward", EditorStyles.boldLabel);
-	while (child.depth > depth)
-	{
-		EditorGUILayout.LabelField("Quest reward", EditorStyles.boldLabel);
-		child.NextVisible(enterChildren:false);
-	}
-}
-	int choice = EditorGUILayout.Popup(label: "Add new Quest Goal", selectedIndex: -1,
-		displayedOptions: m_QuestGoalType.ToArray())
+//	EditorGUILayout.LabelField("Quest reward", EditorStyles.boldLabel);
+//	while (child.depth > depth)
+//	{
+//		EditorGUILayout.LabelField("Quest reward", EditorStyles.boldLabel);
+//		child.NextVisible(enterChildren:false);
+//	}
+
+//	int choice = EditorGUILayout.Popup(label: "Add new Quest Goal", selectedIndex: -1,
+//		displayedOptions: m_QuestGoalType.ToArray())
 
 
-	if(choice != -1)
-	{
-		var newInstance = ScriptableObject.CreateInstance(m_QuestGoalType[choice]);
-		AssetDatabase.AddObjectToAsset(objectToAdd: newInstancce, assetObject: target);
+//	if(choice != -1)
+//	{
+//		var newInstance = ScriptableObject.CreateInstance(m_QuestGoalType[choice]);
+//		AssetDatabase.AddObjectToAsset(objectToAdd: newInstancce, assetObject: target);
 
-		m_QuestGoalListProperty.InsertArrayElementAdIndex(m_QuestGoalListProperty.arraySize);
-		m_QuestGoalListProperty.GetArrayElementAtIndex(m_QuestGoalListProperty.arraySize - 1)
-		.objectReferenceValue = newInstance;
-	}
-#endif 
+//		m_QuestGoalListProperty.InsertArrayElementAdIndex(m_QuestGoalListProperty.arraySize);
+//		m_QuestGoalListProperty.GetArrayElementAtIndex(m_QuestGoalListProperty.arraySize - 1)
+//		.objectReferenceValue = newInstance;
+//	}
+//Editor ed = null;
+//int toDelete = -1;
+//for (int i = 0; i < m_QuestGoalListProperty.arraySize; ++i)
+//{
+//	EditorGUILayout.BeginHorizontal();
+//	EditorGUILayout.BeginVertical();
+//	var item:SerializedProperty = m_QuestGoalListProperty.GetArrayElementAtIndex(i);
+//	SerializedObject obj = new SerializedObject(item.objectReferenceValue);
+
+//	Editor.CreateCachedEditor(item.objectReferenceValue, editorType: null, ref ed);
+
+//	ed.OnInspectorGUI();
+//	EditorGUILayout.EndHorizontal();
+//}
+
+//if (toDelete != -1)
+//{
+//	var item:Object = m_QuestGoalListProperty.GetArrayElementAtIndex(toDelete).objectReferenceValalue;
+//	DestroyImmediate(item, allowDestroyingAssets: true);
+
+//	//need to do it twice, first time just nullify the entry, second actually remove it.
+//	//m_QuestGoalListProperty.DeleteArrayElementAtIndext(toDelete);
+//    //m_QuestGoalListProperty.DeleteArrayElementAtIndext(toDelete);
+//}
+//#endif 

@@ -49,14 +49,14 @@ public class QuestWindow : MonoBehaviour
         }
 
         xpText.text = quest.Reward.XP.ToString();
-        coinsText.text = Quest.Reward.Currency.ToString();
+        coinsText.text = quest.Reward.Currency.ToString();
    
     }
     public void CloseWindow()
     {
         gameObject.SetActive(false);
 
-        for (int i = 0; i < goalsContent.ChildAmount)
+        for (int i = 0; i < goalsContent.childCount;)
         {
             Destroy(goalsContent.GetChild(i).gameObject);
         }
