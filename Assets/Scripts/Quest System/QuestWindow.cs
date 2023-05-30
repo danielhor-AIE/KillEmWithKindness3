@@ -25,7 +25,7 @@ public class QuestWindow : MonoBehaviour
             goalObj.transform.Find("Text").GetComponent<Text>().text = goal.GetDescription();
 
             GameObject countObj = goalObj.transform.Find("Count").gameObject;
-            GameObject skipObj = goalObj.transform.Find("Skip").
+            GameObject skipObj = goalObj.transform.Find("Skip").gameObject;
         }
 
         if (goal.Completed)
@@ -36,7 +36,7 @@ public class QuestWindow : MonoBehaviour
         }
         else
         {
-            countObj.GetComponent<Text>().text = goalCurrent.Amount + "/" + goalPrefab.RequiredAmount;
+            countObj.GetComponent<Text>().text = goalCurrent.Amount + "/" + goal.RequiredAmount;
 
             skipObj.GetComponent<Button>().onClick.AddListener(call: delegate
             {

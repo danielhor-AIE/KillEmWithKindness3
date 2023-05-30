@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventManager : MonoBehaviour
+public class QuestComplete : MonoBehaviour
 {
-    public static object Instance { get; internal set; }
-
     // Start is called before the first frame update
     void Start()
     {

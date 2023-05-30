@@ -13,15 +13,15 @@ public class BuildingGoal : Quest.QuestGoal
 
     public override void Initialize()
     {
-        base.Initiialize();
-        EventManager.Instance.AddListener<BuildingEvnt>(OnBuilding);
+        base.Initialize();
+        EventManager.Instance.AddListener<BuildingGameEvent>(OnBuilding);
     }
 
     private void OnBuilding(BuildingGameEvent eventInfo)
     {
         if (eventInfo.BuildingName == Building)
         {
-            CurrentAmount++
+            CurrentAmount++;
             Evaluate();
         }
     }
