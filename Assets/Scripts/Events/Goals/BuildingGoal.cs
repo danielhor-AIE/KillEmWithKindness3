@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ public class BuildingGoal : Quest.QuestGoal
         base.Initialize();
         EventManager.Instance.AddListener<BuildingGameEvent>(OnBuilding);
     }
-
+    
     private void OnBuilding(BuildingGameEvent eventInfo)
     {
         if (eventInfo.BuildingName == Building)
