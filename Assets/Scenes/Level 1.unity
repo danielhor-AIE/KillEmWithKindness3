@@ -1322,28 +1322,80 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: endDialogueEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
       propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: endDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: endDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1036331108}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
       propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
       propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1036331107}
+      objectReference: {fileID: 1036331108}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: endDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: endDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopDialogue
+      objectReference: {fileID: 0}
     - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
       propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
       propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SendMessage
+      value: StartDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: endDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HeneGames.DialogueSystem.DialogueManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
       propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Component, UnityEngine
+      value: HeneGames.DialogueSystem.DialogueManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HeneGames.DialogueSystem.DialogueManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: HeneGames.DialogueSystem.DialogueManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: endDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
       propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1355,7 +1407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8424478098894022303, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
       propertyPath: action.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8424478098894022303, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
       propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1364,10 +1416,22 @@ PrefabInstance:
     - target: {fileID: 8424478098894022303, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
       propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1036331108}
     - target: {fileID: 8424478098894022303, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
       propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424478098894022303, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424478098894022303, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HeneGames.DialogueSystem.DialogueManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424478098894022303, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
@@ -1376,15 +1440,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2049845564224701571, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
   m_PrefabInstance: {fileID: 1036331104}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1036331107 stripped
+--- !u!114 &1036331108 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3365299705228373233, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4153682916085353414, guid: 78befb1d1db978148a23b89aa31368d1, type: 3}
   m_PrefabInstance: {fileID: 1036331104}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a93df6ace7b999146b3c7ca4e930ab3c, type: 3}
+  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1038785970 stripped
@@ -2164,6 +2228,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8354887226911027761, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8354887226911027761, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
       propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1912957583}
@@ -2172,11 +2240,19 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8354887226911027761, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8354887226911027761, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
       propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 8354887226911027761, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
       propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HeneGames.DialogueSystem.DialogueManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8354887226911027761, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: HeneGames.DialogueSystem.DialogueManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8354887226911027761, guid: 57c654e3917ac4045b7b5d1b0bdafa90, type: 3}
