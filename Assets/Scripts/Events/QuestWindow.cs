@@ -35,11 +35,11 @@ public class QuestWindow : MonoBehaviour
             else
             {
                 countObj.GetComponent<Text>().text = goal.CurrentAmount + "/" + goal.RequiredAmount;
-                
+
                 skipObj.GetComponent<Button>().onClick.AddListener(delegate
                 {
                     goal.Skip();
-                    
+
                     countObj.SetActive(false);
                     skipObj.SetActive(false);
                     goalObj.transform.Find("Done").gameObject.SetActive(true);
