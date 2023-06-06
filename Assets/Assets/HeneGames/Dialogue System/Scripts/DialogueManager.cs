@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace HeneGames.DialogueSystem
 {
-    public class DialogueManager : MonoBehaviour
+    public class DialogueManager: MonoBehaviour
     {
         private int currentSentence;
         private float coolDownTimer;

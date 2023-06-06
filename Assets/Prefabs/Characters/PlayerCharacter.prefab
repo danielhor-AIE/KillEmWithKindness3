@@ -211,10 +211,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5945874905641527708}
-  - component: {fileID: 5945874905641527709}
-  - component: {fileID: 5818605584555264972}
   - component: {fileID: 1558376183760873951}
-  - component: {fileID: 4186302722737752960}
+  - component: {fileID: 3388367903665427500}
+  - component: {fileID: 2025499867154137715}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -238,31 +237,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5945874905641527709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5945874905641527704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea6dad8577f1c2d4494f05e8891632ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 5
---- !u!114 &5818605584555264972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5945874905641527704}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0061e3be7dbb1844d94cf7223935273e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!195 &1558376183760873951
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -285,7 +259,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4186302722737752960
+--- !u!114 &3388367903665427500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,12 +268,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 5945874905641527704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb2378081c4b3c74bb189595775dfbfa, type: 3}
+  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptText: Press 'spacebar'
-  key: 32
-  onceOnly: 0
-  action:
+  audioSource: {fileID: 0}
+  startDialogueEvent:
     m_PersistentCalls:
       m_Calls: []
+  nextSentenceDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  endDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerState: 1
+  sentences:
+  - dialogueCharacter: {fileID: 11400000, guid: 49342ce82b87a294db6a3041d04c2694, type: 2}
+    sentence: HI
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 49342ce82b87a294db6a3041d04c2694, type: 2}
+    sentence: Hello
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!114 &2025499867154137715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945874905641527704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6dad8577f1c2d4494f05e8891632ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
