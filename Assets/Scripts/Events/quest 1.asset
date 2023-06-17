@@ -9,19 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 356ae5053e0dbad4c8fdb62e628dd01d, type: 3}
-  m_Name: quest
+  m_Script: {fileID: 11500000, guid: eef646f9a5b365845a7b5135f5015bc9, type: 3}
+  m_Name: quest 1
   m_EditorClassIdentifier: 
   Information:
-    Name: First step
-    Icon: {fileID: 21300000, guid: f753df1cf7fe2a1458d8d9e78ee58d84, type: 3}
-    Description: Let's get started and expand our town
+    Name: Find Jen's Apple!
+    Icon: {fileID: 21300000, guid: f832b6753068fa04392de6ac369ccccc, type: 3}
+    Description: Jen has lost her apple, help her find it and she will save you a
+      slice of apple pie!
   Reward:
     Currency: 10
     XP: 10
   Goals:
-  - {fileID: 4731317905695009109}
---- !u!114 &4731317905695009109
+  - {fileID: 1735503282572766329}
+--- !u!114 &1735503282572766329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30,11 +31,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af3cd1af702f9224489f7341027ffb59, type: 3}
+  m_Script: {fileID: 11500000, guid: ae9b8a28dc839a34b976c61d250c74c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RequiredAmount: 1
   GoalCompleted:
     m_PersistentCalls:
       m_Calls: []
-  Building: House
+  Building: 
